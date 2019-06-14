@@ -21,7 +21,8 @@ pip install --user virtualenv
 # Install MiniConda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh 
-bash Miniconda3-latest-Linux-x86_64.sh 
+bash ~/Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda
+# Now manually add to .bashrc
 
 # Install Pipenv
 pip install --user pipenv
