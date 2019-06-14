@@ -3,7 +3,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt update
 
 # Add git-branch highlights
-cat > .bashrc << EOF
+sudo bash -c "cat >> ~/.bashrc <<EOF
 function git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
@@ -19,4 +19,4 @@ function markup_git_branch {
   fi
 }
 export PS1='\u@\h \[\033[0;34m\]\w\[\033[0m\] $(markup_git_branch $(git_branch))$ '
-EOF
+EOF"
