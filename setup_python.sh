@@ -30,3 +30,6 @@ $HOME/miniconda3/bin/conda init
 
 # Install Pipenv
 pip install --user pipenv
+
+# Re-source your new configuration
+. ./.bashrc
