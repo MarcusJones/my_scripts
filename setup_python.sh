@@ -14,3 +14,14 @@ curl https://pyenv.run | bash
 echo 'export PATH="/home/ubuntu/.pyenv/bin:$PATH"' >>~/.bashrc
 echo 'eval "$(pyenv init -)"' >>~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >>~/.bashrc
+
+# Install virtualenv
+pip install --user virtualenv
+
+# Install MiniConda
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh 
+bash Miniconda3-latest-Linux-x86_64.sh 
+
+# Install Pipenv
+pip install --user pipenv
