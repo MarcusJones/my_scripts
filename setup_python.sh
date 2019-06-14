@@ -1,8 +1,3 @@
-# Auto-select defaults for installation pop-ups
-export DEBIAN_FRONTEND=noninteractive 
-
-sudo apt update
-
 # Install python3, and link to the python command
 sudo apt install -y python3
 sudo ln /usr/bin/python3 /usr/bin/python
@@ -33,3 +28,7 @@ pip install --user pipenv
 
 # Re-source your new configuration
 . ./.bashrc
+
+# Auto-select defaults for installation pop-ups
+#export DEBIAN_FRONTEND=noninteractive 
+#sudo apt update
