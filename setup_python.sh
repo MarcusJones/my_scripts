@@ -1,11 +1,12 @@
-# Install python3, and link to the python command
+echo ======= Install python3 ========
 sudo apt install -y python3
 sudo ln /usr/bin/python3 /usr/bin/python
 
-#Install pip3 and link
+echo ======= Install pip3 ========
 sudo apt install -y python3-pip
 sudo ln /usr/bin/pip3 /usr/bin/pip
 
+echo ======= Install pyenv ========
 #Install pyenv to manage python versions
 curl https://pyenv.run | bash
 # Add to .bashrc:
@@ -13,22 +14,20 @@ echo 'export PATH="/home/ubuntu/.pyenv/bin:$PATH"' >>~/.bashrc
 echo 'eval "$(pyenv init -)"' >>~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >>~/.bashrc
 
-# Install virtualenv
+echo ======= Install virtualenv ========
 pip install --user virtualenv
 
-# Install MiniConda
+echo ======= Install conda ========
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3-latest-Linux-x86_64.sh 
 bash ~/Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3
 # Now update .bashrc
 $HOME/miniconda3/bin/conda init
 
-# Install Pipenv
+echo ======= Install pipenv ========
 pip install --user pipenv
 
+echo ======= Source .bashrc ========
 # Re-source your new configuration
 . ./.bashrc
 
-# Auto-select defaults for installation pop-ups
-#export DEBIAN_FRONTEND=noninteractive 
-#sudo apt update
