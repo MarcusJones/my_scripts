@@ -1,3 +1,6 @@
+# Auto-select defaults for installation pop-ups
+export DEBIAN_FRONTEND=noninteractive 
+
 sudo apt update
 
 # Install python3, and link to the python command
