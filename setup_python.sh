@@ -13,7 +13,7 @@ curl https://pyenv.run | bash
 export THIS_SHELL=~/.bashrc
 # Or, for ZSH:
 export THIS_SHELL=~/.zshrc
-echo 'export PATH="/home/ubuntu/.pyenv/bin:$PATH"' >> $THIS_SHELL
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> $THIS_SHELL
 echo 'eval "$(pyenv init -)"' >> $THIS_SHELL
 echo 'eval "$(pyenv virtualenv-init -)"' >> $THIS_SHELL
 
