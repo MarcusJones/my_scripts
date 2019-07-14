@@ -10,9 +10,12 @@ echo ======= Install pyenv ========
 #Install pyenv to manage python versions
 curl https://pyenv.run | bash
 # Add to .bashrc:
-echo 'export PATH="/home/ubuntu/.pyenv/bin:$PATH"' >>~/.bashrc
-echo 'eval "$(pyenv init -)"' >>~/.bashrc
-echo 'eval "$(pyenv virtualenv-init -)"' >>~/.bashrc
+export THIS_SHELL=~/.bashrc
+# Or, for ZSH:
+export THIS_SHELL=~/.zshrc
+echo 'export PATH="/home/ubuntu/.pyenv/bin:$PATH"' >> $THIS_SHELL
+echo 'eval "$(pyenv init -)"' >> $THIS_SHELL
+echo 'eval "$(pyenv virtualenv-init -)"' >> $THIS_SHELL
 
 echo ======= Install virtualenv ========
 pip install --user virtualenv
